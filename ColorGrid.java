@@ -71,49 +71,24 @@ public class ColorGrid extends JPanel implements MouseInputListener, KeyListener
 				if(game.grid[row][col].contains(e.getPoint())){
 					game.grid[row][col].color = pickerPanel.color;
 					/*
-					 * If you have a 2D array of GridUnits, and you want to paint 1 unit away from the one you've clicked:
+					 * paint 1 unit away from the one you've clicked with 2D array of GridUnits
 					 * 
 					 * 		1
 					 * 	1	X	1
 					 * 		1
 					 * 
-					 * For 2 units:
+					 * for 2 units:
 					 * 			2	
 					 * 		2	1	2
 					 * 	2	1	X	1	2
 					 * 		2	1	2
 					 * 			2
 					 * 
-					 * And so forth....
-					 * And of course, you need to check boundaries so you don't go out of bounds on the left/right
+					 * and so forth....
+					 * 
+					 * then check boundaries so you don't go out of bounds on the left/right
 					 */		
 					for(int i = 0; i <= cursorSize; i++) {
-//						if(row + i < game.rows) {
-//							game.grid[row + i][col].color = pickerPanel.color;
-//						}
-//						if(row - i >= 0) {
-//							game.grid[row - i][col].color = pickerPanel.color;
-//						}
-//						if(col + i < game.cols) {
-//							game.grid[row][col + i].color = pickerPanel.color;
-//						}
-//						if(col - i >= 0) {
-//							game.grid[row][col - i].color = pickerPanel.color;
-//						}
-//						if(row + i < game.rows && col + i < game.cols) {
-//							game.grid[row + i][col + i].color = pickerPanel.color;
-//						}
-//						if(row + i < game.rows && col - i >= 0) {
-//							game.grid[row + i][col - i].color = pickerPanel.color;
-//						}
-//						if(row - i >= 0 && col - i >= 0) {
-//							game.grid[row - i][col - i].color = pickerPanel.color;
-//						}
-//						if(row - i >= 0 && col + i < game.cols) {
-//							game.grid[row - i][col + i].color = pickerPanel.color;
-//						}
-						
-						//You could also remove all the if-statements for exception handling:
 						try {
 							game.grid[row + i][col].color = pickerPanel.color;
 							game.grid[row - i][col].color = pickerPanel.color;
