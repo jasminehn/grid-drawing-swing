@@ -16,19 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class ColorPickerPanel extends JPanel{
-	/*
-	 * It be helpful to name all your UI components with "Label" "Button" etc
-	 * directly in the name, then you can quickly search for them with this.label or whatever
-	 * You can also give them tooltip descriptions, as I've done for the top two below
-	 */
-	/**
-	 * The text of "Current Color: r g b"
-	 */
-	private JLabel currentColorLabel;
-	/**
-	 * The color preview square
-	 */
-	private JLabel currentColorImageLabel;
+	private JLabel currentColorLabel; //The text of "Current Color: r g b"
+	private JLabel currentColorImageLabel; //The color preview square
 	private JLabel redLabel;
 	private JLabel greenLabel;
 	private JLabel blueLabel;
@@ -110,7 +99,7 @@ public class ColorPickerPanel extends JPanel{
 		int x = 0; int y = 0;
 		
 		
-		//Row 1
+		//row 1
 		y = heightUnit;
 		x = widthUnit;
 		currentColorLabel.setLocation(x, y);
@@ -118,9 +107,9 @@ public class ColorPickerPanel extends JPanel{
 		x += widthUnit * 12;
 		currentColorImageLabel.setLocation(x, y);
 		currentColorImageLabel.setSize(widthUnit*2, heightUnit);
-	//	currentColorLabel.setFont(new Font("Serif", Font.PLAIN, 15));
+		//currentColorLabel.setFont(new Font("Serif", Font.PLAIN, 15));
 		
-		//Row 2
+		//row 2
 		y = heightUnit * 3;
 		x = widthUnit;
 		redLabel.setLocation(x, y);
