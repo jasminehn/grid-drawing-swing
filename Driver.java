@@ -1,7 +1,4 @@
-package HW1;
-
 import java.awt.Color;
-
 import javax.swing.JFrame;
 
 public class Driver {
