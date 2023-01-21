@@ -1,5 +1,3 @@
-package HW1;
-
 import java.awt.Graphics2D;
 
 public class GridGameManager {
