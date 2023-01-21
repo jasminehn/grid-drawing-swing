@@ -14,10 +14,7 @@ import javax.swing.event.MouseInputListener;
 public class ColorGrid extends JPanel implements MouseInputListener, KeyListener {
 
 	GridGameManager game;
-	/**
-	 * Reference to the picker panel, required to update colors
-	 */
-	ColorPickerPanel pickerPanel;
+	ColorPickerPanel pickerPanel; // Reference to the picker panel, required to update colors
 	
 	int cursorSize = 2;
 	
